@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+function checkbox() {
+ 
+  var confirmmessage = "Are you sure you want to continue?";
+  var go = "http://localhost/test/logout.php";
+  var message = "Action Was Cancelled By User";
+ 
+  if (confirm(confirmmessage)) {
+ 
+      window.location = go;
+ 
+  } else {
+ 
+       //alert(message);
+ 
+  }
+ 
+}
+
+</script>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Admin panel</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome ayush<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://localhost/test/changepass.php">Change Password</a></li>
+           
+          </ul>
+        </li>
+      </ul>
+	   <form class="navbar-form navbar-left" action="search.php" method="post">
+      <div class="form-group">
+        <input type="text" class="form-control" name="item" id="item" placeholder="Search" >
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+    </form >
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <!-- <div class="jumbotron text-center"> -->
+ <!-- <h1>Manage User Data</h1> -->
+  
+<!-- </div> -->
+<div class="well well-sm">
+		  <h2 align="center">Manage User Data</h2></div>
+
+<div class="container">
+	  <div class="row">
+		<div class="col-sm-3">
+		
+		  <ul class="nav nav-pills nav-stacked">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="http://localhost/test/register1.php">Add User</a></li>
+  <li><a href="http://localhost/test/changepass.php">Change Password</a></li>
+  <li><a href="#" onClick="checkbox()";>Logout</a></li>
+</ul>
+		<!--  <p><a href="#" class="btn btn-primary btn-block disabled" role="button">Manage User Data</a></p>
+		  <p><a href="http://localhost/test/register1.php" class="btn btn-primary btn-block" role="button">Add User</a></p>
+		  <p><a href="http://localhost/test/changepass.php" class="btn btn-primary btn-block" role="button">Change Password</a></p>
+		  <p><a href="http://localhost/test/login.php" class="btn btn-primary btn-block" role="button">Logout</a></p>  -->
+		</div>
+
+<div class="col-sm-9">
+
+
+  <table class="table table-striped">
+    <thead>
+
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+<th>Action</th>
+<th>Action</th>
+<th>Action</th>
+<th>Action</th>
+<th>Action</th>
+
+
+
+</tr>
+</thead>
+  
+  
+
+
+
+<tr>
+
+	
+	<td><   ></td>
+	
+	
+	</tr>
+	
+	
+
+</div>
+</div>
+</table>
+</div>
+
+
+
+</body>
+</html>

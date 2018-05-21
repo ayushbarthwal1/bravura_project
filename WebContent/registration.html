@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="well well-sm">
+		  <h2 align="center">Register New User </h3>
+		  <a href="http://localhost:8080/BravuraProject/index.html" class="btn btn-info" role="button">Login</a>
+		  </div>
+<div class="container">
+	  <div class="row">
+		<div class="col-sm-3">
+		  
+		  	 
+		<div class="col-sm-12">
+		  
+		  <script>
+		  function checkbox() {
+ 
+  var confirmmessage = "Are you sure you want to continue?";
+  var go = "http://localhost/test/logout.php";
+  var message = "Action Was Cancelled By User";
+ 
+  if (confirm(confirmmessage)) {
+ 
+      window.location = go;
+ 
+  } else {
+ 
+       //alert(message);
+ 
+  }
+ 
+}
+
+function Validateme(frm)
+{
+  if(frm.First_Name.value=="")
+  {
+    alert("Please enter first name");
+	frm.First_Name.focus();
+	return false;
+  }
+  if(frm.Last_Name.value=="")
+  {
+    alert("Please enter last name");
+	frm.Last_Name.focus();
+	return false;
+  }
+  if(frm.email.value=="")
+  {
+    alert("Please enter email");
+	frm.email.focus();
+	return false;
+  }
+   if(frm.Phone.value=="")
+  {
+    alert("Please enter phone number");
+	frm.Phone.focus();
+	return false;
+  }
+  if(frm.Salary.value==""|| frm.Salary.value>100000)
+  {
+    alert("Please enter salary between 1-100000");
+	frm.Phone.focus();
+	return false;
+  }
+  if(frm.g_male.checked) {
+  //Male radio button is checked
+}else if(frm.g_female.checked) {
+  //Female radio button is checked
+}
+else
+{alert("please select gender")
+return false;
+}
+
+  var chkd = frm.c1.checked || frm.c2.checked ||frm.c3.checked ||frm.c4.checked ||frm.c5.checked ;
+   if (chkd == true){
+
+ } else {
+ alert("Please select atleast 1 option from qualification");
+	frm.c1.focus();
+	return false;
+ }
+  return true;
+  
+}
+
+</script>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+ 
+ <form action="save.php" method="post" OnSubmit="return Validateme(this);">
+   
+   <div class="form-group">
+  <label for="First Name">First Name:</label>
+      <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name" >
+    </div>
+
+	<div class="form-group">
+  <label for="Last Name">Last Name:</label>
+      <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name" >
+    </div>
+ 
+  <div class="form-group">
+  <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+ 
+ <div class="form-group">
+  <label for="Phone">Phone:</label>
+      <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" name="phone">
+    </div>
+  
+  <div class="form-group">
+  <label for="Department">Department:</label>
+  <select class="form-control" name="department" id="department">
+    <option value="Accounts">Accounts</option>
+    <option value="IT">IT</option>
+    <option value="Sales">Sales</option>
+    <option value="Management">Management</option>
+  </select>
+</div>
+  
+ <div class="form-group">
+  <label for="Salary">Salary:</label>
+      <input type="number" class="form-control" id="salary" placeholder="Enter Salary" name="salary" >
+    </div>
+
+ <label for="Gender">Gender:</label>	
+	<div class="radio">
+  <label><input type="radio" name="gender" value="male" id="g_male">Male</label>
+<br>
+  <label><input type="radio" name="gender" value="female" id="g_female">Female</label>
+</div>
+	
+<div class="form-group">
+  <label for="Address">Address:</label>
+      <input type="Address" class="form-control" id="address" placeholder="Enter Address" name="address" >
+    </div>
+ 
+ <div class="form-group">
+  <label for="City">City:</label>
+      <input type="City" class="form-control" id="city" placeholder="Enter City" name="city">
+    </div>
+	
+	<div class="form-group">
+  <label for="State">State:</label>
+  <select class="form-control" name="state" id="state">
+    <option value="Uttarakhand">Uttarakhand</option>
+    <option value="UP">UP</option>
+    <option value="Mumbai">Mumbai</option>
+    <option value="Delhi">Delhi</option>
+  </select>
+</div>
+  
+
+<div class="form-group">
+  <label for="name">Country:</label>
+  <select class="form-control" name="country" id="country">
+    <option value="India">India</option>
+    <option value="China">China</option>
+    <option value="Australia">Australia</option>
+    <option value="Canada">Canada</option>
+  </select>
+</div>
+ 
+  
+  <label for="Qualification">Qualification:</label>
+  <div class="checkbox" id="c">
+  <label><input type="checkbox" name="quali[]" value="Btech" id="c1">Btech</label><br>
+  <label><input type="checkbox" name="quali[]" value="Graduate" id="c2">Graduate</label><br>
+  <label><input type="checkbox" name="quali[]" value="Post Graduate" id="c3">Post Graduate</label><br>
+   <label><input type="checkbox" name="quali[]" value="MBA" id="c4">MBA</label><br>
+   <label><input type="checkbox" name="quali[]" value="MCA" id="c5">MCA</label><br>
+</div>
+
+<div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
+</div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+		  
+		</div>
+	  </div>
+</div>
+
+</body> 
+</html>
