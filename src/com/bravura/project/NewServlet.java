@@ -26,6 +26,8 @@ public class NewServlet extends HttpServlet {
 	HttpSession session=request.getSession(false);
 	String s=(String)request.getAttribute("x");
 	out.println("Welcome "+s);
+out.println("Welcome "+s);
+out.println("Welcome "+s);
 	
 	}
 }
